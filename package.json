@@ -1,0 +1,44 @@
+{
+  "name": "paytron-transactions",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "prepare": "is-ci || (cd .. && npm install)"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.132.0",
+    "@types/aws-lambda": "^8.10.83",
+    "@types/jest": "^26.0.10",
+    "@types/jsonwebtoken": "^8.5.6",
+    "@types/node": "^10.17.27",
+    "@types/uuid": "^8.3.3",
+    "aws-cdk": "^1.132.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.132.0",
+    "@aws-cdk/aws-lambda": "^1.132.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.132.0",
+    "@aws-cdk/aws-s3-deployment": "^1.132.0",
+    "@aws-cdk/aws-ssm": "^1.132.0",
+    "@aws-cdk/aws-stepfunctions": "^1.132.0",
+    "@aws-cdk/aws-stepfunctions-tasks": "^1.132.0",
+    "@aws-cdk/core": "^1.132.0",
+    "aws-sdk": "^2.1026.0",
+    "esbuild": "^0.13.13",
+    "excel4node": "^1.7.2",
+    "json-2-csv": "^3.15.0",
+    "jsonwebtoken": "^8.5.1",
+    "source-map-support": "^0.5.16",
+    "uuid": "^8.3.2"
+  },
+  "engines": {
+    "npm": "7.24.2"
+  }
+}
