@@ -5,8 +5,7 @@ export class CdkLambdaS3ExampleStack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
-    // const bucket = new HelloWorldBucket(this, "HelloWorldBucket", props);
-    // new HelloWorldApi(this, "HelloWorldApi", bucket, props);
-    new HelloWorldApi(this, "HelloWorldApi", props);
+    const bucket = new HelloWorldBucket(this, "HelloWorldBucket-sldjkw", props);
+    new HelloWorldApi(this, "HelloWorldApi", bucket, props);
   }
 }

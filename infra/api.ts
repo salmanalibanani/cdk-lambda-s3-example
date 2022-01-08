@@ -7,7 +7,7 @@ export class HelloWorldApi extends Construct {
   constructor(
     scope: Construct,
     id: string,
-    // bucket: HelloWorldBucket,
+    bucket: HelloWorldBucket,
     props?: StackProps
   ) {
     super(scope, id);
@@ -22,7 +22,7 @@ export class HelloWorldApi extends Construct {
     const helloWorldLambda = new HelloWorldLambda(
       this,
       "HelloWorld",
-      // bucket,
+      bucket,
       props
     );
 

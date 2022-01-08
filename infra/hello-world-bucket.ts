@@ -8,7 +8,7 @@ export class HelloWorldBucket extends Construct {
     super(scope, id);
 
     this.Bucket = new Bucket(this, id, {
-      bucketName: `hello-world-bucket`,
+      bucketName: `hello-world-bucket-sldjkw`,
     });
   }
 }

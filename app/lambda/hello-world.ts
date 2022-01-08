@@ -9,14 +9,14 @@ export const handler = async (event: APIGatewayEvent): Promise<ProxyResult> => {
   const s3 = new S3();
 
   const putObjectRequest: PutObjectRequest = {
-    Bucket: "hello-world-bucket",
+    Bucket: "hello-world-bucket-sldjkw",
     Key: "File-" + guid() + ".txt",
     Body: Buffer.from("Some text"),
   };
 
   try {
-    let response = await s3.putObject(putObjectRequest).promise();
-    console.log(`PutObject response: ${response}`);
+    const response = await s3.putObject(putObjectRequest).promise();
+    console.log(`PutObject response: ${JSON.stringify(response)}`);
   } catch (e) {
     console.log(`PutObject failed: ${e}`);
   }

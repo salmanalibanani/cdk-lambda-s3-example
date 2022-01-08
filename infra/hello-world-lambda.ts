@@ -10,7 +10,7 @@ export class HelloWorldLambda extends Construct implements ILambda {
   constructor(
     scope: Construct,
     id: string,
-    // bucket: HelloWorldBucket,
+    bucket: HelloWorldBucket,
     props?: StackProps
   ) {
     super(scope, id);
@@ -25,14 +25,14 @@ export class HelloWorldLambda extends Construct implements ILambda {
       timeout: Duration.seconds(900),
     });
 
-    // this.Function.addToRolePolicy(
-    //   new PolicyStatement({
-    //     sid: "FromCode",
-    //     actions: ["s3:GetObject", "s3:PutObject"],
-    //     effect: Effect.ALLOW,
-    //     resources: [bucket.Bucket.bucketArn + "/*"],
-    //   })
-    // );
+    this.Function.addToRolePolicy(
+      new PolicyStatement({
+        sid: "FromCode",
+        actions: ["s3:GetObject", "s3:PutObject"],
+        effect: Effect.ALLOW,
+        resources: [bucket.Bucket.bucketArn + "/*"],
+      })
+    );
   }
   Function: NodejsFunction;
 }
