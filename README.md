@@ -1,8 +1,8 @@
 # Welcome to your CDK TypeScript project!
 
-I have come up with a layout for CDK projects which is a bit different from the default you get from CDK init. The app and infrastructure are kept in separate directories. Your application code is unaware of any infrastructure related stuff. And by keeping your CDK constructs in multiple files, you will not end up with a infrastructure monolith.
+While working with CDK projects you might find it useful to do things a bit differently form the default project structure you get from **CDK init**. Here I have kept the app and infrastructure in separate directories.  Your application code is unaware of any infrastructure artifacts, which is a good thing. And by keeping your CDK constructs in multiple files, you will not end up with a infrastructure monolith.
 
-## Useful commands
+## Useful CDK commands
 
 - `npm run build` compile typescript to js
 - `npm run watch` watch for changes and compile
